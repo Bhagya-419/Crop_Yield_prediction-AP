@@ -71,7 +71,7 @@ def prediction_page():
 
     # ---------------- FETCH WEATHER ----------------
     if st.button("🌦️ Fetch Weather"):
-        api_key = "f6ad776f73ae89aae4a9f948f8634ff8"
+        api_key = "YOUR-API-KEY"
         url = "https://api.openweathermap.org/data/2.5/weather"
 
         weather_fetched = False
@@ -171,3 +171,4 @@ def prediction_page():
             st.warning("⚠️ Yield is moderate. There is scope to improve conditions.")
         else:
             st.success("✅ Yield is high. Conditions look favorable!")
+
