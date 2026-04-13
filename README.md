@@ -136,7 +136,7 @@ CROP_PREDICTIONLATEST/
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/<your-username>/Crop_Yield_Prediction.git
+git clone https://github.com/Bhagya-419/Crop_Yield_Prediction.git
 cd Crop_Yield_Prediction
 ```
 
