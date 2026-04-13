@@ -1,141 +1,205 @@
-🌾 Crop Yield Prediction System
-📌 Project Overview
+# 🌾 Crop Yield Prediction System
 
-This project is a Crop Yield Prediction System built using Machine Learning and Streamlit.
-It predicts the expected crop yield (kg/ha) for major crops in Andhra Pradesh based on soil, weather, and agricultural parameters.
-The system is designed to support farmers, students, and decision-makers with data-driven insights.
+A Machine Learning-based web application that predicts **crop yield (kg/ha)** for major crops in Andhra Pradesh using soil, weather, and agricultural parameters.
+The system is designed to help farmers, students, and researchers make **data-driven decisions**.
 
-🎯 Objectives
+---
 
-Predict crop yield accurately using ML
+## 🎯 Objectives
 
-Integrate real-time weather data
+* Predict crop yield accurately using Machine Learning
+* Integrate real-time weather data
+* Restrict location selection to Andhra Pradesh
+* Provide a simple and user-friendly interface
+* Demonstrate practical ML application in agriculture
 
-Restrict location selection to Andhra Pradesh
+---
 
-Provide a simple, interactive, and user-friendly interface
+## 🌱 Supported Crops
 
-Demonstrate practical use of ML in agriculture
+* Rice
+* Maize
+* Chickpea
+* Cotton
 
-🌱 Crops Supported
+---
 
-Rice
+## 📥 Input Parameters
 
-Maize
+* Crop Type
+* Year of Cultivation
+* Area (hectares)
+* Soil pH
+* Temperature
+* Humidity
+* Rainfall
+* Wind Speed
+* Nitrogen (Fertilizer input)
+* Location (District → Mandal dropdowns)
 
-Chickpea
+---
 
-Cotton
+## 🌦️ Weather Data Handling
 
-📥 Input Parameters
+* Uses **OpenWeatherMap API**
+* If mandal weather is unavailable → district data is used
+* If both fail → fallback stored values are used
+* Ensures **continuous prediction without interruption**
 
-Crop type
+---
 
-Year of cultivation
+## 🧠 Machine Learning Model
 
-Cultivation area (hectares)
+* Algorithm: Random Forest Regressor
+* Pipeline: Preprocessing + Model
+* Target: Crop Yield (kg/ha)
+* Features:
 
-Soil pH
+  * Weather data
+  * Soil properties
+  * Crop type
+  * Year
+  * Area
 
-Weather parameters
+---
 
-Temperature
+## 🛠️ Tech Stack
 
-Humidity
+### Frontend
 
-Rainfall
+* Streamlit
 
-Wind speed
+### Backend
 
-Fertilizer input (Nitrogen – for demonstration)
+* Python
 
-Location (District → Mandal dropdowns)
+### Machine Learning
 
-🌦️ Weather Data Handling
+* Scikit-learn
 
-Weather data is fetched using OpenWeatherMap API
+### Data Handling
 
-If mandal weather is unavailable:
+* Pandas
+* Joblib
 
-District weather is used automatically
+### API
 
-If both fail:
+* OpenWeatherMap
 
-Previously stored values are used as fallback
-✔️ Ensures uninterrupted prediction
+---
 
-🧠 Machine Learning Model
+## 📂 Project Structure
 
-Algorithm: Random Forest Regressor
+```
+CROP_PREDICTIONLATEST/
+│
+├── data/
+│   └── crop_data.csv
+│
+├── models/
+│   └── crop_yield_pipeline.pkl
+│
+├── notebooks/
+│   ├── crop_prediction.ipynb
+│   └── crop_yield_pipeline.pkl
+│
+├── src/
+│   │
+│   ├── __pycache__/
+│   │   ├── analysis.cpython-311.pyc
+│   │   ├── analysis.cpython-312.pyc
+│   │   ├── auth.cpython-311.pyc
+│   │   ├── auth.cpython-312.pyc
+│   │   ├── home.cpython-311.pyc
+│   │   ├── home.cpython-312.pyc
+│   │   ├── locations.cpython-312.pyc
+│   │   ├── prediction.cpython-311.pyc
+│   │   └── prediction.cpython-312.pyc
+│   │
+│   ├── data/
+│   │   └── users.csv
+│   │
+│   ├── analysis.py
+│   ├── app.py
+│   ├── auth.py
+│   ├── home.py
+│   ├── locations.py
+│   └── prediction.py
+│
+└── requirements.txt
+```
 
-Pipeline: Preprocessing + Model
+---
 
-Target Variable: Crop Yield (kg/ha)
+## 🚀 How to Run the Project
 
-Features: Weather, soil, nutrients, crop, year, area
+### 1️⃣ Clone the Repository
 
-🖥️ Tech Stack
+```bash
+git clone https://github.com/<your-username>/Crop_Yield_Prediction.git
+cd Crop_Yield_Prediction
+```
 
-Frontend: Streamlit
+---
 
-Backend: Python
+### 2️⃣ Install Dependencies
 
-ML: Scikit-learn
-
-Weather API: OpenWeatherMap
-
-Data Handling: Pandas, Joblib
-
-📊 Features
-
-Dynamic district → mandal dropdowns
-
-Real-time weather integration
-
-Smart weather fallback mechanism
-
-Fertilizer input for presentation credibility
-
-Clean UI with clear insights
-
-Ready for future enhancements like charts & history tracking
-
-🚀 How to Run the Project
-
-Clone the repository
-
-Install dependencies
-
+```bash
 pip install -r requirements.txt
+```
 
+---
 
-Run the app
+### 3️⃣ Run the Application
 
+```bash
 streamlit run src/app.py
+```
 
+---
 
-Open the browser and start predicting 🌾
+### 4️⃣ Open in Browser
 
-🔮 Future Enhancements
+```
+http://localhost:8501
+```
 
-Store prediction history
+---
 
-Add dynamic analysis charts
+## 📊 Features
 
-Include soil type classification
+* Dynamic district → mandal dropdowns
+* Real-time weather integration
+* Smart fallback mechanism
+* Clean and interactive UI
+* Ready for enhancements (charts, tracking)
 
-Recommendation system for fertilizers
+---
 
-Mobile-friendly UI
+## 🔮 Future Enhancements
 
-👩‍🎓 Academic Note
+* Store prediction history
+* Add visualization charts
+* Soil classification system
+* Fertilizer recommendation system
+* Mobile-friendly UI
 
-This project was developed as a college mini-project and later enhanced with real-world features to improve practicality and presentation quality.
+---
 
-❤️ Acknowledgements
+## 👩‍🎓 Academic Note
 
-OpenWeatherMap API
+This project was developed as a **college mini-project** and enhanced with real-world features for better usability and presentation.
 
-Streamlit Community
+---
 
-Faculty & mentors for guidance
+## ❤️ Acknowledgements
+
+* OpenWeatherMap API
+* Streamlit Community
+* Faculty & Mentors
+
+---
+
+## 👩‍💻 Developed By
+
+**Bhagya Lakshmi**
