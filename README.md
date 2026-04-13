@@ -186,12 +186,6 @@ http://localhost:8501
 
 ---
 
-## 👩‍🎓 Academic Note
-
-This project was developed as a **college mini-project** and enhanced with real-world features for better usability and presentation.
-
----
-
 ## ❤️ Acknowledgements
 
 * OpenWeatherMap API
